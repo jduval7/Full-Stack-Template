@@ -12,6 +12,7 @@ if [[ $db = "mongo" ]]; then
     rm database/indexSql.js
     rm database/indexPostgres.js
     rm database/schema.sql
+    rm database/schemaPostgres.sql
     mv database/indexMongo.js database/index.js
     npm install mongoose
 elif [[ $db = "postgres" ]]; then
@@ -25,6 +26,7 @@ elif [[ $db = "sql" ]]; then
     echo "MySql Selected!"
     rm database/indexMongo.js
     rm database/indexPostgres.js
+    rm database/schemaPostgres.sql
     mv database/indexSql.js database/index.js
     npm install mysql
 else 
