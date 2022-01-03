@@ -33,5 +33,43 @@ else
     echo "Try Again.."         
 fi
 
+# ____CSS PREFERENCES HERE____:
 
-# npm install lodash
+echo "Which CSS style do you want to use.."
+echo "-regular"
+echo "-styledComponents"
+echo "-modules"
+echo "-tailwind"
+echo "-material"
+
+read preference
+if [[ $preference = "regular" ]]; then 
+    echo "Plain ole CSS!"
+    rm client/src/components/StyledComponents.jsx
+    rm client/src/components/Button.style.js
+    rm client/src/components/Button.js
+    rm client/src/components/Container.style.js
+elif [[ $preference = "styledComponents" ]]; then 
+    echo "You've got Style!"
+    rm client/src/components/App.jsx
+    mv client/src/components/StyledComponents.jsx client/src/components/App.jsx
+    npm i styled-components
+elif [[ $preference = "modules" ]]; then 
+    echo "Modular for the win!"
+    rm client/src/components/StyledComponents.jsx
+    rm client/src/components/Button.style.js
+    rm client/src/components/Button.js
+    rm client/src/components/Container.style.js
+elif [[ $preference = "tailwind" ]]; then 
+    echo "Tails never fails!"
+    rm client/src/components/StyledComponents.jsx
+    rm client/src/components/Button.style.js
+    rm client/src/components/Button.js
+    rm client/src/components/Container.style.js
+elif [[ $preference = "material" ]]; then 
+    echo "Sucker for material things!"
+    rm client/src/components/StyledComponents.jsx
+    rm client/src/components/Button.style.js
+    rm client/src/components/Button.js
+    rm client/src/components/Container.style.js
+fi
