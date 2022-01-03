@@ -49,10 +49,12 @@ if [[ $preference = "regular" ]]; then
     rm client/src/components/Button.style.js
     rm client/src/components/Button.js
     rm client/src/components/Container.style.js
+    rm modules.config.js
 elif [[ $preference = "styledComponents" ]]; then 
     echo "You've got Style!"
     rm client/src/components/App.jsx
     mv client/src/components/StyledComponents.jsx client/src/components/App.jsx
+    rm modules.config.js
     npm i styled-components
 elif [[ $preference = "modules" ]]; then 
     echo "Modular for the win!"
@@ -60,16 +62,20 @@ elif [[ $preference = "modules" ]]; then
     rm client/src/components/Button.style.js
     rm client/src/components/Button.js
     rm client/src/components/Container.style.js
+    rm webpack.config.js
+    mv modules.config.js webpack.config.js
 elif [[ $preference = "tailwind" ]]; then 
     echo "Tails never fails!"
     rm client/src/components/StyledComponents.jsx
     rm client/src/components/Button.style.js
     rm client/src/components/Button.js
     rm client/src/components/Container.style.js
+    rm modules.config.js
 elif [[ $preference = "material" ]]; then 
     echo "Sucker for material things!"
     rm client/src/components/StyledComponents.jsx
     rm client/src/components/Button.style.js
     rm client/src/components/Button.js
     rm client/src/components/Container.style.js
+    rm modules.config.js
 fi
