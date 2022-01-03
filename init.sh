@@ -50,11 +50,17 @@ if [[ $preference = "regular" ]]; then
     rm client/src/components/Button.js
     rm client/src/components/Container.style.js
     rm modules.config.js
+    rm client/src/components/Module.jsx
+    rm client/src/components/App.module.css
+    rm tailwind.config.js
 elif [[ $preference = "styledComponents" ]]; then 
     echo "You've got Style!"
     rm client/src/components/App.jsx
     mv client/src/components/StyledComponents.jsx client/src/components/App.jsx
     rm modules.config.js
+    rm client/src/components/Module.jsx
+    rm client/src/components/App.module.css
+    rm tailwind.config.js
     npm i styled-components
 elif [[ $preference = "modules" ]]; then 
     echo "Modular for the win!"
@@ -64,6 +70,9 @@ elif [[ $preference = "modules" ]]; then
     rm client/src/components/Container.style.js
     rm webpack.config.js
     mv modules.config.js webpack.config.js
+    rm client/src/components/App.jsx
+    mv client/src/components/Module.jsx client/src/components/App.jsx
+    rm tailwind.config.js
 elif [[ $preference = "tailwind" ]]; then 
     echo "Tails never fails!"
     rm client/src/components/StyledComponents.jsx
@@ -71,6 +80,9 @@ elif [[ $preference = "tailwind" ]]; then
     rm client/src/components/Button.js
     rm client/src/components/Container.style.js
     rm modules.config.js
+    rm client/src/components/App.module.css
+    rm client/src/components/Module.jsx
+    npm install -D tailwindcss postcss autoprefixer
 elif [[ $preference = "material" ]]; then 
     echo "Sucker for material things!"
     rm client/src/components/StyledComponents.jsx
@@ -78,4 +90,7 @@ elif [[ $preference = "material" ]]; then
     rm client/src/components/Button.js
     rm client/src/components/Container.style.js
     rm modules.config.js
+    rm client/src/components/Module.jsx
+    rm client/src/components/App.module.css
+    rm tailwind.config.js
 fi
