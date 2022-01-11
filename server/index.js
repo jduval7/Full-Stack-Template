@@ -3,7 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 //imports the database connection for sql queries
-var db = require('../database-mysql');
+//var db = require('../database-mysql');
 
 const app = express();
 app.use(express.json());
