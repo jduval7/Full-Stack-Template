@@ -82,7 +82,7 @@ elif [[ $preference = "tailwind" ]]; then
     rm modules.config.js
     rm client/src/components/App.module.css
     rm client/src/components/Module.jsx
-    npm install -D tailwindcss postcss autoprefixer
+    npm install --save-dev tailwindcss postcss autoprefixer mini-css-extract-plugin postcss-loader postcss-preset-env
 elif [[ $preference = "material" ]]; then 
     echo "Sucker for material things!"
     rm client/src/components/StyledComponents.jsx
@@ -93,4 +93,5 @@ elif [[ $preference = "material" ]]; then
     rm client/src/components/Module.jsx
     rm client/src/components/App.module.css
     rm tailwind.config.js
+    npm install @mui/core @emotion/react @emotion/styled @mui/icons-material @mui/material @mui/styled-engine @mui/styles 
 fi
