@@ -1,6 +1,8 @@
 # Full Stack Template
 
-A repository to serve as a template that you can clone down to initialize a Full Stack project.
+A repository to serve as a template that you can clone down to initialize a Full Stack React project.
+Choose your database (Mongo, Postgres, mySQL) and CSS (Material, CSS Modules, Styled Components, Regular) options and the file structure 
+automatically deletes files you don't need and adds packages/setup that you do!
 
 ## Installation
 
